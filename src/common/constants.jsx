@@ -8,7 +8,7 @@ export const NAV_LINKS = [
     { href: "#contact-us", label: "Contact Us" },
 ];
 
-export const shoes = [
+export const SHOES = [
     {
         thumbnail: thumbnailShoe1,
         bigShoe: bigShoe1,
@@ -23,13 +23,13 @@ export const shoes = [
     },
 ];
 
-export const statistics = [
+export const STATISTICS = [
     { value: '1k+', label: 'Brands' },
     { value: '500+', label: 'Shops' },
     { value: '250k+', label: 'Customers' },
 ];
 
-export const products = [
+export const PRODUCTS = [
     {
         imgURL: shoe4,
         name: "Nike Air Jordan-01",
@@ -52,7 +52,7 @@ export const products = [
     },
 ];
 
-export const services = [
+export const SERVICES = [
     {
         imgURL: truckFast,
         label: "Free shipping",
@@ -70,7 +70,7 @@ export const services = [
     },
 ];
 
-export const reviews = [
+export const REVIEWS = [
     {
         imgURL: customer1,
         customerName: 'Morich Brown',
@@ -86,7 +86,7 @@ export const reviews = [
 ];
 
 
-export const footerLinks = [
+export const FOOTER_LINKS = [
     {
         title: "Products",
         links: [
@@ -117,7 +117,7 @@ export const footerLinks = [
     },
 ];
 
-export const socialMedia = [
+export const SOCIAL_MEDIA = [
     { src: facebook, alt: "facebook logo" },
     { src: twitter, alt: "twitter logo" },
     { src: instagram, alt: "instagram logo" },
