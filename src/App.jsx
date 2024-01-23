@@ -8,7 +8,7 @@ import {
   Subscribe,
   Footer,
 } from "./Sections";
-import Header from "./components/Navbar/Header/Header";
+import Header from "./components/Header/Header";
 
 const App = () => {
   return (

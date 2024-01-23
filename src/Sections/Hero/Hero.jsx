@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "../../components/Navbar/Button/Button";
-import ShoeCard from "../../components/Navbar/ShoeCard/ShoeCard";
+import Button from "../../components/Button/Button";
+import ShoeCard from "../../components/ShoeCard/ShoeCard";
 import { arrowRight } from "../../assets/icons";
 import { STATISTICS, SHOES } from "../../common/constants";
 import { bigShoe1 } from "../../assets/images";
@@ -28,7 +28,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40">
+      <div className="relative flex-1 flex justify-center items-center bg-primary bg-hero bg-cover bg-center xl:min-h-screen max-xl:py-40">
         <img src={bigShoeImg} alt="shoe collection" width={610} height={500} className="object-contain relative z-10"/>
         <div className="flex flex-row gap-4 sm:gap-6 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
           {SHOES.map((shoe) => (

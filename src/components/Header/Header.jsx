@@ -1,5 +1,5 @@
-import { headerLogo } from "../../../assets/images";
-import Navbar from "../Navbar";
+import { headerLogo } from "../../assets/images";
+import Navbar from '../Navbar/Navbar';
 
 const Header = () => {
   return (
