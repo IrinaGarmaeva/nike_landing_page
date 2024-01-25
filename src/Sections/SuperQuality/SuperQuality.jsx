@@ -14,7 +14,6 @@ const SuperQuality = () => {
           <span className="text-coral-red">Quality</span> Shoes
         </h2>
         <p className="mt-4 lg:max-w-lg info-text">
-          {" "}
           Ensuring premium comfort and style, our meticulously crafted footwear
           is designed to elevate your experience, providing you with unmatched
           quality, innovation, and a touch of elegance.
