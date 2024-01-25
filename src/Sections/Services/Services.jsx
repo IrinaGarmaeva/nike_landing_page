@@ -1,6 +1,6 @@
 const Services = () => {
   return (
-    <div>Services</div>
+    <section className="padding padding-x py-10">Services</section>
   )
 }
 

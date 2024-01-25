@@ -2,7 +2,7 @@ import React from 'react'
 
 const SpecialOffer = () => {
   return (
-    <div>SpecialOffer</div>
+    <section className='padding'>SpecialOffer</section>
   )
 }
 

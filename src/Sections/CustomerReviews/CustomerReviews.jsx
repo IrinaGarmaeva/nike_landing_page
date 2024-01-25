@@ -1,6 +1,6 @@
 const CustomerReviews = () => {
   return (
-    <div>CustomerReviews</div>
+    <section className="bg-pale-blue padding">CustomerReviews</section>
   )
 }
 
