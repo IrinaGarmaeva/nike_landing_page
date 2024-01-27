@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="flex items-center gap-5 mt-8">
             {SOCIAL_MEDIA.map((media) => (
               <div
-                className="flex justify-center items-center w-12 h-12 bg-white rounded-full"
+                className="flex justify-center items-center w-12 h-12 bg-white rounded-full hover"
                 key={media.alt}
               >
                 <a href={media.link} target="_blank" rel="noopener noreferrer"><img src={media.src} alt={media.alt} width={24} height={24} /></a>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {toast} from 'react-toastify'
 import Button from "../../components/Button/Button";
 import {
   VALIDATION__MESSAGES,
@@ -24,6 +25,7 @@ const Subscribe = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setEmail("");
+    console.log(toast.success(VALIDATION__MESSAGES.validEmail))
   };
 
   return (

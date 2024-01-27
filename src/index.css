@@ -21,6 +21,14 @@
   .input {
     @apply sm:flex-1 max-sm:w-[80%] text-base leading-normal text-slate-gray p-4 outline-none sm:border-none ;
   }
+
+  .button {
+    @apply flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none;
+  }
+
+  .hover {
+    @apply transition-all duration-700 ease-linear hover:opacity-80 hover:scale-110
+  }
 }
 
 @layer utilities {

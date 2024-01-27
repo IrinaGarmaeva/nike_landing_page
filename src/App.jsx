@@ -1,3 +1,5 @@
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   Hero,
   PopularProducts,
@@ -8,13 +10,15 @@ import {
   Subscribe,
   Footer,
 } from "./Sections";
+import ScrollUpButton from './components/ScrollUpButton/ScrollUpButton';
 import Header from "./components/Header/Header";
 
 const App = () => {
   return (
     <div className="relative">
       <Header />
-      <main className="relative">
+      <main className="relative max-container">
+        <ScrollUpButton />
         <Hero />
         <PopularProducts />
         <SuperQuality />
@@ -24,6 +28,7 @@ const App = () => {
         <Subscribe />
       </main>
       <Footer />
+      <ToastContainer />
     </div>
   );
 };
