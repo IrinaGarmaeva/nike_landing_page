@@ -15,7 +15,7 @@ const Subscribe = () => {
 
     if (!PATTERN_EMAIL.test(e.target.value)) {
       setError(VALIDATION__MESSAGES.invalidEmail);
-      !e.target.value && setError("");
+      !e.target.value && setError("")
     } else {
       setError("");
     }
@@ -35,14 +35,14 @@ const Subscribe = () => {
         Sign Up for
         <span className="text-coral-red"> Updates </span>& Newsletter
       </h3>
-      <div className="flex flex-col">
+      <div className="flex flex-col min-h-full">
         <form
-          className=" w-full flex items-center max-sm:flex-col gap-5 p-2.5 sm:border sm:border-slate-gray rounded-full"
+          className=" w-full flex items-center gap-5 p-2.5 border border-slate-gray rounded-full"
           autoComplete="off"
           noValidate
           onSubmit={handleSubmit}
         >
-          <div className="flex flex-row w-[380px]">
+          <div className="flex flex-row lg:w-96 pl-1 max-sm:w-full">
             <input
               value={email}
               type="email"
@@ -51,12 +51,12 @@ const Subscribe = () => {
               name="email"
               onChange={handleChangeEmail}
             />
-            <div className="flex max-sm:justify-end items-center max-sm:w-full">
-              <Button label="Sign Up" fullWidth iconUrl={arrowRight}/>
+            <div className=" w-[86px]">
+              <Button fullWidth iconUrl={arrowRight}/>
             </div>
           </div>
         </form>
-        <span className="mt-3 text-coral-red pl-5 max-lg:self-center">{error}</span>
+        <span className="mt-3 text-coral-red pl-[27px]  min-h-6">{error}</span>
       </div>
     </section>
   );
