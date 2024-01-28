@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div className="relative">
       <Header />
-      <main className="relative max-container">
+      <main className="relative">
         <ScrollUpButton />
         <Hero />
         <PopularProducts />

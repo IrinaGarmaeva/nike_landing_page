@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar';
 
 const Header = () => {
   return (
-    <header className="flex justify-between padding-x py-10 absolute z-10 w-full">
+    <header className="flex justify-between items-center padding z-10 w-full max-container">
       <a href="/">
         <img src={headerLogo} alt="nike logo" width={130} height={29} />
       </a>
