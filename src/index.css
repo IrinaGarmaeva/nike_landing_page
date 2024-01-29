@@ -27,7 +27,15 @@
   }
 
   .hover {
-    @apply transition-all duration-700 ease-linear hover:opacity-80 hover:scale-110
+    @apply transition-all duration-700 ease-out hover:opacity-80 hover:scale-110
+  }
+
+  .mobile {
+    @apply fixed right-0 top-0 flex-col justify-between z-20
+  }
+
+  .overlay {
+    @apply max-lg:w-2/5 max-lg:h-screen max-lg:z-20 max-lg:bg-white max-lg:fixed max-lg:top-0 max-lg:right-0 max-lg:shadow-xl
   }
 }
 

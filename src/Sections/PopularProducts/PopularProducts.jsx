@@ -10,7 +10,7 @@ const PopularProducts = () => {
           Experience top-notch quality and style with our sough-after
           selections. Discover a world of comfort, design, and value
         </p>
-        <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-14 sm:gap-4 max-sm:grid-col">
+        <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4">
           {PRODUCTS.map((product) => (
             <PopularProductCard key={product.imgURL} {...product} />
           ))}
