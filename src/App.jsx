@@ -17,9 +17,9 @@ import Cart from "./components/Cart/Cart";
 
 const App = () => {
   return (
-    <div className="relative dark:bg-bg-dark">
+    <div className="relative dark:bg-bg-dark flex flex-col h-screen">
       <Header />
-      <main className="relative">
+      <main className="relative flex-grow dark:bg-bg-dark">
         <Routes>
           <Route
             path="/"

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { formatNumber } from '../../common/helpers';
+import {formatNumber} from '../../common/helpers.js';
 
 const StatisticCounter = ({label}) => {
   const [animatedStatistics, setAnimatedStatistics] = useState({
@@ -38,8 +38,8 @@ const StatisticCounter = ({label}) => {
 
   return (
     <div>
-      <p className="text-4xl font-bold font-palanquin">{formatNumber(animatedStatistics[label.toLowerCase()])}+</p>
-      <p className="leading-7 font-montserrat text-slate-gray">{label}</p>
+      <p className="text-4xl font-bold font-palanquin dark:text-white">{formatNumber(animatedStatistics[label.toLowerCase()])}+</p>
+      <p className="leading-7 font-montserrat text-slate-gray dark:text-white-400">{label}</p>
     </div>
   );
 };

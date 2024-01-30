@@ -3,7 +3,7 @@ import Button from "../../components/Button/Button";
 import ShoeCard from "../../components/ShoeCard/ShoeCard";
 import StatisticCounter from "../../components/StatisticCounter/StatisticCounter";
 import { arrowRight } from "../../assets/icons";
-import { STATISTICS, SHOES } from "../../common/constants";
+import { STATISTICS, SHOES } from "../../common/constants.js";
 import { bigShoe1 } from "../../assets/images";
 
 const Hero = () => {
@@ -13,14 +13,14 @@ const Hero = () => {
     <section id="home" className="padding-1 padding-b padding-l padding-r">
       <div className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container">
         <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full">
-          <h1 className="mt-10 text-8xl font-palanquin max-sm:text-[72px] max-sm:leading-[82px] font-bold">
-            <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
+          <h1 className="mt-10 text-8xl font-palanquin max-sm:text-[72px] max-sm:leading-[82px] font-bold  dark:text-white leading-tight">
+            <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10 rounded-lg dark:xl:bg-slate-gray">
               The new Arrival
             </span>
             <br />
             <span className="text-coral-red mt-3 inline-block">Nike</span> Shoes
           </h1>
-          <p className="font-monserrat text-slate-gray text-lg mt-6 mb-14 leading-8 sm:max-w-sm">
+          <p className="font-monserrat text-slate-gray text-lg mt-6 mb-14 leading-8 sm:max-w-sm dark:text-white-400">
             Discover stylish Nike arrivals, quality comfort, and innovation for
             your active life
           </p>

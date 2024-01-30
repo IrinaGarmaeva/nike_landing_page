@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { hamburger, closeIcon } from "../../assets/icons";
-import { NAV_LINKS } from "../../common/constants";
+import { NAV_LINKS } from "../../common/constants.js";
 import { GoSun, GoMoon } from "react-icons/go";
 import { GiShoppingCart } from "react-icons/gi";
 import SearchForm from "../SearchForm/SearchForm";
+import { useTheme } from "../../context/ThemeContext";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const {currentTheme, changeCurrentTheme} = useTheme()
 
   return (
-    <nav className="max-lg:mx-0 flex flex-row gap-10 max-xl:flex-row-reverse items-center max-lg:gap-6">
+    <nav className="max-lg:mx-0 flex flex-row gap-8 max-xl:flex-row-reverse items-center max-lg:gap-5">
       <ul
         className="flex-1 flex justify-center items-center gap-16 max-xl:hidden"
         id="menu"
@@ -22,7 +24,7 @@ const Navbar = () => {
             <li key={item.label} className="relative hover:scale-105">
               <a
                 href={item.href}
-                className="font-montserrat leading-normal text-lg text-slate-gray ease-linear transition-all hover:text-coral-red"
+                className="font-montserrat leading-normal text-lg text-slate-gray ease-linear transition-all hover:text-coral-red dark:text-white-400"
               >
                 {item.label}
               </a>
@@ -30,12 +32,12 @@ const Navbar = () => {
           )
         )}
       </ul>
-      <div className="flex flex-col-reverse gap-5 md:hidden">
+      <div className="flex flex-col-reverse xl:hidden">
 
         <div
           className={`${
             isMobileMenuOpen
-              ? "w-3/4 h-screen z-20 bg-white fixed top-0 right-0 shadow-xl"
+              ? "w-3/4 h-screen z-20 bg-white fixed top-0 right-0 shadow-xl dark:bg-[#212124]"
               : ""
           }  `}
         >
@@ -49,7 +51,7 @@ const Navbar = () => {
                   <li key={item.label} onClick={() => setIsMobileMenuOpen(false)}>
                     <a
                       href={item.href}
-                      className="font-montserrat leading-normal text-xl font-bold text-slate-gray"
+                      className="font-montserrat leading-normal text-xl font-bold text-slate-gray dark:text-white-400"
                     >
                       {item.label}
                     </a>
@@ -58,7 +60,7 @@ const Navbar = () => {
               </ul>
             </div>
           )}
-          <div className={`hidden max-xl:block  ${isMobileMenuOpen ? "" : ""}`}>
+          <div className={`hidden max-xl:block dark:text-coral-red ${isMobileMenuOpen ? "" : ""}`}>
             {isMobileMenuOpen ? (
               <img
                 src={closeIcon}
@@ -85,11 +87,15 @@ const Navbar = () => {
         <div>
           <SearchForm />
         </div>
-        <div className="">
-          <GoSun size={20} />
+        <div className="" onClick={() => changeCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')}>
+          {currentTheme === 'light' ? (
+            <GoSun size={20} />
+          ) : (
+            <GoMoon size={20} className="text-coral-red"/>
+          )}
         </div>
         <Link to="/cart" className="">
-          <GiShoppingCart size={21} />
+          <GiShoppingCart size={21} className="dark:text-coral-red"/>
         </Link>
       </div>
     </nav>
