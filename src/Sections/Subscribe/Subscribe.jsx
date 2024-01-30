@@ -10,6 +10,7 @@ import { arrowRight } from "../../assets/icons";
 const Subscribe = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  // const [isValid, setIsValid] = useState(false)
 
   const handleChangeEmail = (e) => {
     setEmail(e.target.value);
@@ -24,8 +25,12 @@ const Subscribe = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setEmail("");
-    toast.success(VALIDATION__MESSAGES.validEmail)
+    if(!email) {
+      setError(VALIDATION__MESSAGES.invalidEmail)
+    } else {
+      setEmail("");
+      toast.success(VALIDATION__MESSAGES.validEmail)
+    }
   };
 
   return (

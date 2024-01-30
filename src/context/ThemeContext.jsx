@@ -9,7 +9,6 @@ export const ThemeProvider = ({children}) => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
 
   const changeCurrentTheme = (newTheme) => {
-    console.log('you clicked')
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme)
   }
