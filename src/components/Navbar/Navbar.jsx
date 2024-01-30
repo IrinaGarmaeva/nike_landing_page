@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { hamburger, closeIcon } from "../../assets/icons";
 import { NAV_LINKS } from "../../common/constants.js";
 import { GoSun, GoMoon } from "react-icons/go";
 import { GiShoppingCart } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoCloseOutline } from "react-icons/io5";
 import SearchForm from "../SearchForm/SearchForm";
 import { useTheme } from "../../context/ThemeContext";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const {currentTheme, changeCurrentTheme} = useTheme()
+  const { currentTheme, changeCurrentTheme } = useTheme();
 
   return (
     <nav className="max-lg:mx-0 flex flex-row gap-8 max-xl:flex-row-reverse items-center max-lg:gap-5">
@@ -17,23 +18,18 @@ const Navbar = () => {
         className="flex-1 flex justify-center items-center gap-16 max-xl:hidden"
         id="menu"
       >
-        {NAV_LINKS.map(
-          (
-            item
-          ) => (
-            <li key={item.label} className="relative hover:scale-105">
-              <a
-                href={item.href}
-                className="font-montserrat leading-normal text-lg text-slate-gray ease-linear transition-all hover:text-coral-red dark:text-white-400"
-              >
-                {item.label}
-              </a>
-            </li>
-          )
-        )}
+        {NAV_LINKS.map((item) => (
+          <li key={item.label} className="relative hover:scale-105">
+            <a
+              href={item.href}
+              className="font-montserrat leading-normal text-lg text-slate-gray ease-linear transition-all hover:text-coral-red dark:text-white-400"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
       </ul>
       <div className="flex flex-col-reverse xl:hidden">
-
         <div
           className={`${
             isMobileMenuOpen
@@ -48,7 +44,10 @@ const Navbar = () => {
                 id="menu"
               >
                 {NAV_LINKS.map((item) => (
-                  <li key={item.label} onClick={() => setIsMobileMenuOpen(false)}>
+                  <li
+                    key={item.label}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     <a
                       href={item.href}
                       className="font-montserrat leading-normal text-xl font-bold text-slate-gray dark:text-white-400"
@@ -60,22 +59,21 @@ const Navbar = () => {
               </ul>
             </div>
           )}
-          <div className={`hidden max-xl:block dark:text-coral-red ${isMobileMenuOpen ? "" : ""}`}>
+          <div
+            className={`hidden max-xl:block dark:text-coral-red ${
+              isMobileMenuOpen ? "" : ""
+            }`}
+          >
             {isMobileMenuOpen ? (
-              <img
-                src={closeIcon}
-                alt="close menu icon"
-                width={22}
-                height={22}
+              <IoCloseOutline
+                size={30}
+                className="absolute right-10 top-3 dark:text-coral-red"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="absolute right-10 top-3"
               />
             ) : (
-              <img
-                src={hamburger}
-                alt="hamburger menu icon"
-                width={25}
-                height={25}
+              <RxHamburgerMenu
+                size={23}
+                className="dark:text-coral-red"
                 onClick={() => setIsMobileMenuOpen(true)}
               />
             )}
@@ -87,15 +85,20 @@ const Navbar = () => {
         <div>
           <SearchForm />
         </div>
-        <div className="" onClick={() => changeCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')}>
-          {currentTheme === 'light' ? (
+        <div
+          className=""
+          onClick={() =>
+            changeCurrentTheme(currentTheme === "light" ? "dark" : "light")
+          }
+        >
+          {currentTheme === "light" ? (
             <GoSun size={20} />
           ) : (
-            <GoMoon size={20} className="text-coral-red"/>
+            <GoMoon size={20} className="text-coral-red" />
           )}
         </div>
         <Link to="/cart" className="">
-          <GiShoppingCart size={21} className="dark:text-coral-red"/>
+          <GiShoppingCart size={21} className="dark:text-coral-red" />
         </Link>
       </div>
     </nav>
