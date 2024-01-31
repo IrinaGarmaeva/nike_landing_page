@@ -13,7 +13,6 @@ import {
 } from "./Sections";
 import ScrollUpButton from "./components/ScrollUpButton/ScrollUpButton";
 import Header from "./components/Header/Header";
-import Cart from "./components/Cart/Cart";
 
 const App = () => {
   return (
@@ -36,7 +35,6 @@ const App = () => {
               </>
             }
           />
-          <Route path="/cart" element={<Cart />} />
         </Routes>
       </main>
       <Footer />

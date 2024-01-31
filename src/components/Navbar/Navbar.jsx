@@ -86,7 +86,6 @@ const Navbar = () => {
           <SearchForm />
         </div>
         <div
-          className=""
           onClick={() =>
             changeCurrentTheme(currentTheme === "light" ? "dark" : "light")
           }
@@ -97,7 +96,7 @@ const Navbar = () => {
             <GoMoon size={20} className="text-coral-red" />
           )}
         </div>
-        <Link to="/cart" className="">
+        <Link to="/">
           <GiShoppingCart size={21} className="dark:text-coral-red" />
         </Link>
       </div>
