@@ -1,6 +1,7 @@
 # Nike landing page
 
 This project is a responsive landing page for Nike shop to practice Tailwind.
+The primary focus of the project was to gain hands-on experience with Tailwind, and as such, functional elements like buttons, the cart icon, and the search form have not been implemented. However, the landing page showcases several working features, including a dark mode toggle, a subscription form for the newsletter, live email validation, and notifications upon successful subscription.
 
 ## Table of Contents
 - [Links](#links)
